@@ -18,11 +18,16 @@ body {
 
 header {
   width: 100%;
-  height: 20vh;
+  height: 25vh;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+  padding-top: 2vh;
 }
 
 #logo {
-  height: 60%;
+  height: 40%;
   margin-bottom: 2vh;
 }
 
@@ -49,7 +54,7 @@ nav ul li:hover {
 
 main {
   width: 100%;
-  margin-top: 5vh;
+  margin-top: 25vh; /* Ho aumentato il margin-top del main per fissare l'header e non aver problemi allo scroll */
 }
 
 .slider {
