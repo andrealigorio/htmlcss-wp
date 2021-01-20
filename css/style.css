@@ -12,13 +12,13 @@
 
 body {
   width: 80%;
-  margin: 1vh auto;
+  margin: 0 auto;
   font-family: 'Poppins', sans-serif;
 }
 
 header {
   width: 100%;
-  height: 25vh;
+  height: 20vh;
   position: fixed;
   top: 0;
   z-index: 999;
@@ -27,8 +27,7 @@ header {
 }
 
 #logo {
-  height: 40%;
-  margin-bottom: 2vh;
+  height: 50%;
 }
 
 nav ul {
@@ -43,6 +42,7 @@ nav ul li {
 }
 
 nav ul li a {
+  font-size: 13px;
   text-decoration: none;
   color: grey;
 }
@@ -54,7 +54,7 @@ nav ul li:hover {
 
 main {
   width: 100%;
-  margin-top: 25vh; /* Ho aumentato il margin-top del main per fissare l'header e non aver problemi allo scroll */
+  margin-top: 22vh; /* Ho aumentato il margin-top del main per fissare l'header e non aver problemi allo scroll */
 }
 
 .slider {
@@ -118,8 +118,9 @@ main {
   transform: translateY(-50%); /* ho utilizzato il translate sulle asse delle y per centrare verticalmente il contenuto visto che non riuscivo in altri modi */
 }
 
-.title_text div {
+.title_text div, .box p {
   color: grey;
+  text-align: justify;
 }
 
 .box {
@@ -158,10 +159,6 @@ main {
 .box.middle {
   width: calc(60% - 4vw);
   margin: 0 2vw;
-}
-
-.box p {
-  color: grey;
 }
 
 footer {
