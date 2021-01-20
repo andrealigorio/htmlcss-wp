@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.columns::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+body {
+  width: 80%;
+  margin: 1vh auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 20vh;
+}
+
+#logo {
+  height: 60%;
+  margin-bottom: 2vh;
+}
+
+nav ul {
+  list-style: none;
+  height: 8vh;
+  line-height: 8vh;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0 0.7vw;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: grey;
+}
+nav ul li:hover {
+  background-color: #e7e7e7;
+  border-bottom: 2px solid black;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+
+main {
+  width: 100%;
+  margin-top: 5vh;
+}
+
+.slider {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+.banner img {
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: -25%;  /*il top è negativo in modo da tagliare l'immagine nella parte superiore*/
+  left: 50%;
+  transform: translateX(-50%); /*utilizzo il translate sull'asse delle x in modo che quando riduco le dimensioni del device l'immagine del banner rimane centrale e da alla pagina un aspetto più responsive*/
+}
+
+.layover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.banner_text {
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  width: 50%;
+  padding: 10vh 7vh;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.columns {
+  width: 100%;
+  margin-top: 5vh;
+  padding-bottom: 2vh;
+}
+
+.title {
+  width: 100%;
+  height: 15vh;
+  margin-bottom: 3vh;
+  position: relative;
+}
+
+.title .title_text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* ho utilizzato il translate sulle asse delle y per centrare verticalmente il contenuto visto che non riuscivo in altri modi */
+}
+
+.title_text div {
+  color: grey;
+}
+
+.box {
+  float: left;
+}
+
+.box.left,
+.box.right {
+  width: 20%;
+}
+
+.bottom_image {
+  width: 100%;
+  height: 25vh;
+  position: relative;
+}
+
+.box .image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.box .image.img_left {
+    background-image: url("../img/img-1.jpg");
+}
+.box .image.img_right {
+    background-image: url("../img/img-3.jpg");
+}
+.box .image.img_middle {
+    background-image: url("../img/banner-2.jpg");
+}
+
+.box.middle {
+  width: calc(60% - 4vw);
+  margin: 0 2vw;
+}
+
+.box p {
+  color: grey;
+}
+
+footer {
+  width: 100%;
+  height: 10vh;
+  margin-top: 2vh;
+}
+
+footer .copyright {
+  text-align: center;
+  line-height: 10vh;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+footer span::before {
+  content: '\2665';
+  color: red;
+  font-size: 20px;
+}
