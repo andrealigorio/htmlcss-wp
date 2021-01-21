@@ -18,7 +18,7 @@ body {
 
 header {
   width: 100%;
-  height: 20vh;
+  height: 160px;
   position: fixed;
   top: 0;
   z-index: 999;
@@ -26,8 +26,8 @@ header {
   padding-top: 2vh;
 }
 
-#logo {
-  height: 50%;
+#logo img {
+  height: 70px;
 }
 
 nav ul {
@@ -54,12 +54,12 @@ nav ul li:hover {
 
 main {
   width: 100%;
-  margin-top: 22vh; /* Ho aumentato il margin-top del main per fissare l'header e non aver problemi allo scroll */
+  margin-top: 170px; /* Ho aumentato il margin-top del main per fissare l'header e non aver problemi allo scroll */
 }
 
 .slider {
   width: 100%;
-  height: 70vh;
+  height: 500px;
   position: relative;
 }
 
@@ -71,22 +71,18 @@ main {
   border-radius: 10px;
 }
 .banner img {
-  min-height: 100%;
-  min-width: 100%;
-  position: absolute;
-  top: -25%;  /*il top è negativo in modo da tagliare l'immagine nella parte superiore*/
-  left: 50%;
-  transform: translateX(-50%); /*utilizzo il translate sull'asse delle x in modo che quando riduco le dimensioni del device l'immagine del banner rimane centrale e da alla pagina un aspetto più responsive*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .layover {
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
 }
 
 .banner_text {
@@ -134,31 +130,25 @@ main {
 
 .bottom_image {
   width: 100%;
-  height: 25vh;
+  height: 200px;
   position: relative;
-}
-
-.box .image {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
   border-radius: 10px;
 }
 
-.box .image.img_left {
-    background-image: url("../img/img-1.jpg");
-}
-.box .image.img_right {
-    background-image: url("../img/img-3.jpg");
-}
 .box .image.img_middle {
     background-image: url("../img/banner-2.jpg");
 }
 
 .box.middle {
-  width: calc(60% - 4vw);
-  margin: 0 2vw;
+  width: calc(60% - 40px);
+  margin: 0 20px;
+}
+
+.bottom_image img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
 }
 
 footer {
